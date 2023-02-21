@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Item class
 class Item
   attr_reader :id
