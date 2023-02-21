@@ -1,4 +1,5 @@
 # class Author
+
 class Author
   attr_reader :id
   attr_accessor :first_name, :last_name, :items
@@ -8,5 +9,10 @@ class Author
     @first_name = first_name
     @last_name = last_name
     @items = []
+  end
+
+  def add_item(item)
+    @items << Item
+    item.author = self
   end
 end
