@@ -16,7 +16,6 @@ class App
     0 => :exit
   }.freeze
 
-
   def find_books
     puts 'get_books'
   end
