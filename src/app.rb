@@ -1,5 +1,15 @@
 # class App
+require_relative './modules/game_module'
+require_relative './modules/author_module'
+require './util/json_storage'
+
 class App
+  include GameModule
+  include AuthorModule
+  def initialize
+    @games = JSONStorage.load_data('games')
+    @authors = JSONStorage.load_data('authors')
+  end
   ACTIONS = {
     1 => :find_books,
     2 => :find_music_albums,
@@ -21,20 +31,22 @@ class App
   end
 
   def display_interactive_console
-    puts "\nPlease choose an option by entering a number:
-    1.  List all books
-    2.  List all music albums
-    3.  List all movies
-    4.  List all games
-    5.  List all genres
-    6.  List all labels
-    7.  List all authors
-    8.  List all sources
-    9.  Add a book
-    10. Add a music album
-    11. Add a movie
-    12. Add a game
-    0 - Exit"
+    puts
+    puts 'Please choose an option by entering a number:'
+    puts
+    puts ' 1.  List all books'
+    puts ' 2.  List all music albums'
+    puts ' 3.  List all movies'
+    puts ' 4.  List all games'
+    puts ' 5.  List all genres'
+    puts ' 6.  List all labels'
+    puts ' 7.  List all authors'
+    puts ' 8.  List all sources'
+    puts ' 9.  Add a book'
+    puts ' 10. Add a music album'
+    puts ' 11. Add a movie'
+    puts ' 12. Add a game'
+    puts ' 0 - Exit'
   end
 
   def run
@@ -44,6 +56,8 @@ class App
       entry = gets.chomp.to_i
       option = ACTIONS[entry]
       option ? send(option) : puts('Invalid input')
+      JSONStorage.save_data('games', @games)
+      JSONStorage.save_data('authors', @authors)
     end
   end
 end
