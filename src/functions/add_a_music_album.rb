@@ -1,5 +1,5 @@
-require_relative './add_genre.rb'
-require_relative '../classes/music_album.rb'
+require_relative './add_genre'
+require_relative '../classes/music_album'
 
 def add_a_music_album
   puts 'On spotify?[y/n]: '
@@ -9,6 +9,5 @@ def add_a_music_album
   music_album = MusicAlbum.new(on_spotify, published_date)
   @music_albums << music_album
   puts 'Music album added successfully!'
-
-  genre = add_genre
+  add_genre
 end

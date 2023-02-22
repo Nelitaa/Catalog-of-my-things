@@ -1,4 +1,4 @@
-require_relative '../classes/genre.rb'
+require_relative '../classes/genre'
 
 def create_genre
   puts "\nName of the genre: "
