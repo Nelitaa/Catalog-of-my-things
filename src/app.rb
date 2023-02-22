@@ -1,9 +1,9 @@
 # class App
-# require_relative './modules/game_module'
+require_relative './modules/game_module'
 require_relative './modules/author_module'
 
 class App
-  # include GameModule
+  include GameModule
   include AuthorModule
   def initialize
     @games = []
