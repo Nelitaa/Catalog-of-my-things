@@ -1,14 +1,20 @@
 # class App
 require_relative './modules/game_module'
 require_relative './modules/author_module'
+require_relative './modules/label_module'
+require_relative './modules/book_module'
 require './util/json_storage'
 
 class App
   include GameModule
   include AuthorModule
+  include LabelModule
+  include BookModule
   def initialize
     @games = JSONStorage.load_data('games')
     @authors = JSONStorage.load_data('authors')
+    @labels = JSONStorage.load_data('labels')
+    @books = JSONStorage.load_data('books')
   end
   ACTIONS = {
     1 => :find_books,
@@ -58,6 +64,8 @@ class App
       option ? send(option) : puts('Invalid input')
       JSONStorage.save_data('games', @games)
       JSONStorage.save_data('authors', @authors)
+      JSONStorage.save_data('labels', @labels)
+      JSONStorage.save_data('books', @books)
     end
   end
 end
