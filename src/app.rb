@@ -2,6 +2,9 @@
 require_relative './modules/game_module'
 require_relative './modules/author_module'
 require './util/json_storage'
+require_relative './functions/find_music_albums'
+require_relative './functions/find_genres'
+require_relative './functions/add_a_music_album'
 
 class App
   include GameModule
@@ -9,7 +12,10 @@ class App
   def initialize
     @games = JSONStorage.load_data('games')
     @authors = JSONStorage.load_data('authors')
+    @music_albums = JSONStorage.load_data('music_albums').empty? ? [] : JSONStorage.load_data('music_albums')
+    @genres = JSONStorage.load_data('genres').empty? ? [] : JSONStorage.load_data('genres')
   end
+
   ACTIONS = {
     1 => :find_books,
     2 => :find_music_albums,
@@ -58,6 +64,8 @@ class App
       option ? send(option) : puts('Invalid input')
       JSONStorage.save_data('games', @games)
       JSONStorage.save_data('authors', @authors)
+      JSONStorage.save_data('music_albums', @music_albums) unless @music_albums.empty?
+      JSONStorage.save_data('genres', @genres) unless @genres.empty?
     end
   end
 end
