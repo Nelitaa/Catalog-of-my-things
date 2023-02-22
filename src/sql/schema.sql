@@ -41,3 +41,18 @@ CREATE TABLE genre(
   name            varchar(100),
   PRIMARY KEY(id)
 );
+
+-- Create Books Table
+CREATE TABLE books (
+  id INT,
+	publisher  varchar(100),
+	cover_state varchar(100),
+	FOREIGN KEY(id) REFERENCES item(id)
+);
+
+-- Create Labels Table
+CREATE TABLE labels (
+  id INT GENERATED ALWAYS AS IDENTITY,
+  title varchar(100),
+  color varchar(100)
+);
