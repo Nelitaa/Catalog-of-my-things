@@ -4,5 +4,4 @@ def find_genres
   @genres.each_with_index do |genre, index|
     puts "#{index + 1}. #{genre.name}"
   end
-  puts "\n End of list.\n"
 end

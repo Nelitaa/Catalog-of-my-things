@@ -11,5 +11,4 @@ def add_a_music_album
   puts 'Music album added successfully!'
 
   genre = add_genre
-  genre.add_item(music_album)
 end

@@ -4,6 +4,7 @@ require_relative './modules/author_module'
 require './util/json_storage'
 require_relative './functions/find_music_albums.rb'
 require_relative './functions/find_genres.rb'
+require_relative './functions/add_a_music_album.rb'
 
 class App
   include GameModule
