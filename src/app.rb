@@ -21,21 +21,20 @@ class App
   end
 
   def display_interactive_console
-    puts
-    puts 'Please choose an option by entering a number:'
-    puts ' 1.  List all books'
-    puts ' 2.  List all music albums'
-    puts ' 3.  List all movies'
-    puts ' 4.  List all games'
-    puts ' 5.  List all genres'
-    puts ' 6.  List all labels'
-    puts ' 7.  List all authors'
-    puts ' 8.  List all sources'
-    puts ' 9.  Add a book'
-    puts ' 10. Add a music album'
-    puts ' 11. Add a movie'
-    puts ' 12. Add a game'
-    puts ' 0 - Exit'
+    puts "\nPlease choose an option by entering a number:
+    1.  List all books
+    2.  List all music albums
+    3.  List all movies
+    4.  List all games
+    5.  List all genres
+    6.  List all labels
+    7.  List all authors
+    8.  List all sources
+    9.  Add a book
+    10. Add a music album
+    11. Add a movie
+    12. Add a game
+    0 - Exit"
   end
 
   def run
