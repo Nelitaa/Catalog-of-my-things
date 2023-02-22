@@ -1,4 +1,4 @@
-require_relative '../classes/music_album.rb'
+require_relative '../classes/music_album'
 require 'date'
 
 describe MusicAlbum do
