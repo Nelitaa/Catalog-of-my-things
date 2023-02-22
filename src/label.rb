@@ -1,4 +1,3 @@
-require_relative './item'
 # label class
 class Label
   attr_accessor :title, :color, :item
