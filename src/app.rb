@@ -1,13 +1,14 @@
 # class App
-# require_relative './modules/game_module'
+require_relative './modules/game_module'
 require_relative './modules/author_module'
+require './util/json_storage'
 
 class App
-  # include GameModule
+  include GameModule
   include AuthorModule
   def initialize
-    @games = []
-    @authors = []
+    @games = JSONStorage.load_data('games')
+    @authors = JSONStorage.load_data('authors')
   end
   ACTIONS = {
     1 => :find_books,
@@ -55,6 +56,8 @@ class App
       entry = gets.chomp.to_i
       option = ACTIONS[entry]
       option ? send(option) : puts('Invalid input')
+      JSONStorage.save_data('games', @games)
+      JSONStorage.save_data('authors', @authors)
     end
   end
 end
