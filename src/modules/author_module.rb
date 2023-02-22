@@ -5,7 +5,7 @@ module AuthorModule
     puts 'There are no authors yet, please add an author(s)!' if @authors.empty?
     puts 'Authors:'
     @authors.each_with_index do |author, index|
-      puts "#{index + 1}) first name: #{author.first_name}, last name: #{author.last_name}"
+      puts "[Author #{index + 1}]. First Name : #{author.first_name}, Last Name : #{author.last_name} "
     end
   end
 
@@ -28,7 +28,7 @@ module AuthorModule
 
   def add_author
     if @authors.empty?
-      puts 'Please add a author!'
+      puts 'Please add an author!'
       create_author
     else
       puts 'Select the accurate author or add a new author: '

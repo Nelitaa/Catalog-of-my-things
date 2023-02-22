@@ -5,11 +5,11 @@ module GameModule
   def find_games
     puts 'Music Albums: '
     if @games.empty?
-      puts "\nNo added games yet. Please add some games . . . "
+      puts "\nNo  games added yet. Please add some  . . . "
     else
       @games.each_with_index do |game, index|
-        puts "#{index + 1}) Multiplayer: #{game.multiplayer}, Publish Date: #{game.publish_date},
-        Last played date: #{game.last_played_at}"
+        puts "[Game #{index + 1}]. Multiplayer : #{game.multiplayer},+
+        Publish Date : #{game.publish_date}, Last Played Date : #{game.last_played_at}"
       end
     end
   end
