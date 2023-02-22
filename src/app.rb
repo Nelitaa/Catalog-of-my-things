@@ -1,5 +1,14 @@
 # class App
+# require_relative './modules/game_module'
+require_relative './modules/author_module'
+
 class App
+  # include GameModule
+  include AuthorModule
+  def initialize
+    @games = []
+    @authors = []
+  end
   ACTIONS = {
     1 => :find_books,
     2 => :find_music_albums,
@@ -23,6 +32,7 @@ class App
   def display_interactive_console
     puts
     puts 'Please choose an option by entering a number:'
+    puts
     puts ' 1.  List all books'
     puts ' 2.  List all music albums'
     puts ' 3.  List all movies'
