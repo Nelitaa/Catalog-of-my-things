@@ -54,6 +54,10 @@ In this project, we created a console app that will help you to keep a record of
 
 - N/A
 
+## 🚀 Video Link <a name="live-demo"></a>
+
+[Link](https://www.loom.com/share/7c81e90f18bd4b9fb720729b0a0eb426)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
