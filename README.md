@@ -50,10 +50,6 @@ In this project, we created a console app that will help you to keep a record of
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- N/A
-
 ## 🚀 Video Link <a name="live-demo"></a>
 
 [Link](https://www.loom.com/share/7c81e90f18bd4b9fb720729b0a0eb426)
@@ -70,6 +66,7 @@ In order to run this project you need:
 
 - [Ruby](https://www.ruby-lang.org/en/) installed and running.
 - You should be able to use [IRB](https://en.wikipedia.org/wiki/Ruby_(programming_language)#Features).
+
 ### Setup
 
 Clone this repository to your desired folder:
@@ -92,6 +89,14 @@ To run the project, execute the following command:
 
 ```
   ruby src/main.rb
+```
+
+### Test <a name="test"></a>
+
+To test the project, execute the following command:
+
+```
+  rspec src/spec/
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -130,7 +135,6 @@ To run the project, execute the following command:
 
   - Add movies
   - List movies
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
