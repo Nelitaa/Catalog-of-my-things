@@ -78,8 +78,8 @@ class App
       JSONStorage.save_data('authors', @authors)
       JSONStorage.save_data('labels', @labels)
       JSONStorage.save_data('books', @books)
-      JSONStorage.save_data('music_albums', @music_albums) unless @music_albums.empty?
-      JSONStorage.save_data('genres', @genres) unless @genres.empty?
+      JSONStorage.save_data('music_albums', @music_albums)
+      JSONStorage.save_data('genres', @genres)
     end
   end
 end
