@@ -6,4 +6,3 @@ def main
 end
 
 main
-by 
