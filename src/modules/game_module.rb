@@ -4,7 +4,7 @@ require_relative './author_module'
 
 module GameModule
   def find_games
-    puts 'Music Albums: '
+    puts 'Game List : '
     if @games.empty?
       puts "\nNo  games added yet. Please add some  . . . "
     else
