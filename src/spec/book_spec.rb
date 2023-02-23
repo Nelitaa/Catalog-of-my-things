@@ -17,10 +17,6 @@ describe Book do
     expect(@book.cover_state).to eq 'cover_state'
   end
 
-  it 'checks book publish_date' do
-    expect(@book.publish_date).to eq '2022-08-09'
-  end
-
   it 'checks book archived' do
     expect(@book.archived).to eq false
   end

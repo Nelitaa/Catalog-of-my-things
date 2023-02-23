@@ -1,4 +1,3 @@
-# class Game
 require_relative './item'
 require 'date'
 require 'json'

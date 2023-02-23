@@ -1,4 +1,3 @@
-# class Author
 require 'json'
 
 class Author

@@ -1,6 +1,7 @@
 require_relative '../classes/game'
 require_relative '../classes/author'
 require_relative './author_module'
+
 module GameModule
   def find_games
     puts 'Music Albums: '
