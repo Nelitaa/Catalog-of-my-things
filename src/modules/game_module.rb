@@ -9,8 +9,13 @@ module GameModule
       puts "\nNo  games added yet. Please add some  . . . "
     else
       @games.each_with_index do |game, index|
-        puts "[Game #{index + 1}]. Multiplayer : #{game.multiplayer},+
-        Publish Date : #{game.publish_date}, Last Played Date : #{game.last_played_at}"
+        puts "[Game #{index + 1}]"
+        puts "ID :               #{game.id}"
+        puts "Multiplayer :      #{game.multiplayer}"
+        puts "Publish Date :     #{game.publish_date}"
+        puts "Last Played Date : #{game.last_played_at}"
+        puts "Label :            [Title : #{game.label.title}, Color : #{game.label.color}]" if game.label
+        puts
       end
     end
   end
@@ -29,9 +34,9 @@ module GameModule
     game = Game.new(publish_date, last_played_date, multiplayer)
 
     @games.push(game)
-    author = add_author
-    author.add_item(game)
-
-    puts "Game created with #{author.first_name} author added successfully!"
+    label = add_a_label
+    game.add_label(label)
+    label.add_item(game)
+    puts "Game created with #{label.color} label added successfully!"
   end
 end

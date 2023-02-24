@@ -22,9 +22,7 @@ module LabelModule
     label = Label.new(title, color)
 
     @labels.push(label)
-    item = add_item
-    item.add_label(label)
-
-    puts "Label created with #{item.title} item added successfully!"
+    puts "Label created with label #{label.title}  added successfully!\n"
+    label
   end
 end

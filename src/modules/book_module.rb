@@ -7,7 +7,7 @@ module BookModule
       puts "\nNo  books added yet. Please add some  . . . "
     else
       @books.each_with_index do |book, index|
-        puts "[Book #{index + 1}]. Publisher : #{book.publisher},+
+        puts "[Book #{index + 1}]. Publisher : #{book.publisher},
         Publish Date : #{book.publish_date}, Cover State : #{book.cover_state}"
       end
     end

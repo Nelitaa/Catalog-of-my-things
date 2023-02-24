@@ -17,9 +17,9 @@ module AuthorModule
   end
 
   def create_author()
-    print 'Enter the first name of the author to the game: '
+    print 'Enter the first name of the author to the book: '
     firstname = gets.chomp
-    print 'Enter the last name of the author to the game: '
+    print 'Enter the last name of the author to the book: '
     lastname = gets.chomp
     author = Author.new(firstname, lastname)
     @authors << author
